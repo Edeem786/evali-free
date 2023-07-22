@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    | Check In
+{% endblock %}
+
+{% block body %}
+    <div class="center">
+         <div class="mb-3">
+            <form action="/checkin" method="post">
+                <p class="display-3">
+                    When was the last time you vaped?
+                </p>
+                <br>
+                <input type="date" name="answer" required>
+                <br>
+                <br>
+                <button class="btn btn-primary center mb-3" type="submit">Submit</button>
+            </form>
+         </div>
+    </div>
+{% endblock %}

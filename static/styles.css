@@ -1,0 +1,118 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #52057B;
+    color: white
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+
+.tablecenter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.table-class {
+    margin: 0;
+    padding: 0;
+}
+table {
+    margin: 0;
+    padding: 0;
+}
+
+.notification {
+    background-color: black;
+    font-size: 30px;
+}
+.nav-link {
+    font-size: 20px;
+}
+.small {
+    width: 30%;
+}
+.half {
+    width:  50%;
+}
+.large {
+    width: 80%;
+}
+.image-container {
+    position: relative;
+    max-width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto; 
+}
+
+.image-text-left {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    text-align: left; 
+    white-space: normal;
+    max-width: 10%;
+}
+.image-text-right {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px; 
+    padding: 5px 10px;
+    text-align: left; 
+    white-space: normal;
+    max-width: 20%;
+}
+.upper {
+    top: 40%;
+}
+
+.lower {
+    top:60%;
+}
+
+.circle {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%; 
+    width: 150px;
+    height: 150px; 
+    background-color: #000000; 
+    padding: 20px; 
+}
+
+.streak {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.logo {
+    width: 70%;
+    height: auto;
+}
+.card {
+    color: black;
+}

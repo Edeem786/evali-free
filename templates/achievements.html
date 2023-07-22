@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    | Achievements
+{% endblock %}
+
+{% block body %}
+<div class="center">
+    <br>
+    <div class="center mb">
+        <p class="h3">
+            Achievements: 
+        </p>
+    </div>
+    <br>
+    <div class="row center large mb-3">
+        {% if badges %}
+            {% for badge in badges %}
+                {% if badge %}
+                    <div class="col">
+                        <img src="static/images/{{ badge }}.png" width="300">
+                        <p class="h3">
+                            {{ badge }}
+                        </p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <p class="h3">
+                You have not earned any achievements
+            </p>
+        {% endif %}
+    </div>
+    <br>
+    <br>
+    <div class="center mb">
+        <p class="h3">
+            Unearned Achievements: 
+        </p>
+    </div>
+    <div class="row center large mb-3">
+        {% for badge in unearned %}
+            <div class="col">
+                <img src="static/images/{{ badge }}.png" width="300">
+                <p class="h3">
+                    {{ badge }}
+                </p>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

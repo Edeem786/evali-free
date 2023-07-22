@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="row">
+        <div class="image-container">
+            <img src="static/images/vaping2.png" class="img-fluid" alt="vaping">
+        </div>
+    </div>
+    <br>
+    <div>
+        {% if session["user_id"] %}
+        <div class="center">
+            <div>
+                <p class="display-3">
+                    Welcome, {{ logindata[0] }}!
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+            {% if not userdata[6]%}
+            <div class="center">
+                <p class="display-5">
+                    You have not started your quit plan
+                </p>
+                <br>
+                <div class="mb-3">
+                    <a href="/start">
+                        <button type="submit" class="btn btn-primary" style="margin: auto;">Become Vape Free</button>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        {% endif %}
+    </div>
+    <div class="row centered">
+        <div class="col">
+            <img src="static/images/heart.png">
+        </div>
+        <div class="col">
+            <img src="static/images/studenthat.png" width="300">
+        </div>
+        <div class="col">
+            <img src="static/images/support.png" width="300">
+        </div>
+    </div>
+    <br>
+    <div class="row centered h6" style="margin-left: 15px;">
+        <div class="col">
+            <p>
+                By quitting vaping, you can lower your risk of serious health issues like cardiovascular disease, lung damage, and respiratory problems. Reducing the chances of heart-related complications, including heart attacks, is a significant benefit of stopping vaping.
+            </p>
+        </div>
+        <div class="col">
+            <p>
+                When students vape in school, it goes beyond distracting others. It directly impacts their academic performance, leading to lower grades. Studies show that e-cigarette users tend to miss assignments, skip classes, and have lower GPAs compared to non-tobacco users.
+            </p>
+        </div>
+        <div class="col">
+            <p>
+                We're not going to sugarcoat it: quitting vaping is hard, but the benefits are well worth the struggle. Giving up nicotine can actually lead to reduced stress, anxiety, and depression.
+            </p>
+        </div>
+    </div>
+    
+{% endblock %}

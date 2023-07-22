@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    | Leaderboards
+{% endblock %}
+
+{% block body %}
+    <br>
+    <div>
+        <p class="center display-3">
+            Top 10 Users by Exp
+        </p>
+    </div>
+    <br>
+    <div class="tablecenter">
+        <table class="table table-dark half centered">
+            <tr>
+                <td class="h3"> Username </td>
+                <td class="h3"> Total EXP</td>
+            </tr>
+            {% for user in topten %}
+                <tr>
+                    <td> {{ user[0] }} </td>
+                    <td> {{ user[1] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

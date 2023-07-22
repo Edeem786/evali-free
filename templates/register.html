@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    | register
+{% endblock %}
+
+{% block body %}
+    <p class="mb-3 display-4 center">
+        Register an Account
+    </p>
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <div class="row small center">
+            <div class="col">
+                <label for="validationDefault03" class="form-label">City</label>
+                <input name="city" type="text" class="form-control" id="validationDefault03" required>
+                <br>
+            </div>
+            <div class="col">
+                <label for="validationDefault03" class="form-label">Province</label>
+                <input name="state" type="text" class="form-control" id="validationDefault03" required>
+                <br>
+            </div>
+            <div class="col">
+                <label for="validationDefault03" class="form-label">Country</label>
+                <input name="country" type="text" class="form-control" id="validationDefault03" required>
+                <br>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary center" type="submit">Register</button>
+    </form>
+    <br>
+    <br>
+    <div class="center">
+        <p class="h6">
+            Already have an Account?
+        </p>
+        <div class="mb-3">
+            <a href="/login">
+                <button type="submit" class="btn btn-primary" style="margin: auto;">Login</button>
+            </a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    | Community
+{% endblock %}
+
+{% block body %}
+<div class="center">
+    <p class="display-3">
+        COMMUNITY
+    </p>
+    <div>
+        <ul class="display-6">Find your buddy here!</ul>
+    </div>
+        <div class="content-form row half center">
+        <form action="/community" method="post">
+            <p class="h3">What's your name?</p>
+            <br>
+            <input class="mb-3" type="text"  name="name" placeholder="Type here">
+            <br>
+            <p class="h3">What happened?</p>
+            <br>
+            <div class="mb-3">
+                <div class="input-group">
+                    <textarea class="form-control" name="story" aria-label="Story AboutQuitting"></textarea>
+                </div>
+            </div>
+            <br>
+            <button type="submit">Share</button>
+        </form>
+    </div>
+    </div>
+    <br>
+    <div class="center mb">
+        <p class="h3">
+            What other users had to say: 
+        </p>
+    </div>
+    <br>
+    <div class="row center large mb-3">
+        {% for person in stories %}
+            <div class="col">
+                <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ person[0] }}</h5>
+                    <p class="card-text">{{ person[1] }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

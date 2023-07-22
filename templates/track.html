@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    | Stats
+{% endblock %}
+
+{% block body %}
+    <br>
+    <div class="center display-1">
+        Stats for {{ logindata[1] }}
+    </div>
+    <br>
+    <div class=" row center mb-3">
+        <div class="col">
+            <p class="display-6">
+                Your streak:
+            </p>
+            <div class="circle">
+                <p class="display-1 streak">
+                    {{ userdata[3] }}
+                </p>
+            </div>
+        </div>
+        <div>
+            <p class="display-6">
+                Total Exp:
+            </p>
+            <div class="circle">
+                <p class="display-1 streak">
+                    {{ userdata[4] }}
+                </p>
+            </div>
+        </div>
+        {% if userdata[11] %}
+        <div>
+            <p class="display-6">
+                Estimated Money Saved:
+            </p>
+            <div class="circle">
+                <p class="display-1 streak">
+                    {{ userdata[12] * userdata[11] }}
+                </p>
+            </div>
+        </div>
+        {% endif %}
+        <br>
+        <br>
+        {% if userdata[6] %}
+        <div>
+            <div class="h2">
+                Remember Your Motivation For Qutting:
+            </div>
+            <br>
+            <div class="h5">
+                {{ userdata[6] }}
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        {% endif %}
+        <br>
+        <br>
+        <br>
+    </div>
+{% endblock %}

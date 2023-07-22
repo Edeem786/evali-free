@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    | Start your quitting plan
+{% endblock %}
+
+{% block body %}
+<p class="center display-3 mb-3">
+    Create your quit plan
+</p>
+<br>
+<br>
+<br>
+    <form class="centered center" id="quitForm" action="/start" method="post">
+        <div class="mb-3">
+            <p class="h4 mb-3">
+                Let's start by entering your reasons for quitting:
+            </p>
+            <br>
+            <p class="h4">
+                Here are some example reasons:
+            </p>
+            <br>
+            <div class="half center row h6">
+                <div class="col">
+                    <p>I want to be healtier</p>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <p>I want to excel more in school/sports</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>I want to improve relationships</p>
+                </div>
+                <br>
+                <div class="mb-3 tablecenter">
+                    <div class="input-group">
+                        <textarea class="form-control" name="reasons" aria-label="Motivation For Quitting"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="mb-3">
+            <p class="h4 mb-3">
+                When do you want to start quitting?
+            </p>
+            <br>
+            <div class="center h6">
+                <p>Tip: Avoid quitting during stressful times, such as final exams, holidays, or busy seasons at work.</p>
+            </div>
+            <input type="date" id="quitDate" name="quitDate">
+        </div>
+        <br>
+        <div class="mb-3">
+            <p class="h4 mb-3">
+                How much money do you spend on vaping per week, on average?
+            </p>
+            <br>
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <div class="col-sm-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Rp</span>
+                            <input type="number" name="moneyperweek" class="form-control" placeholder="Amount Spent" required>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="mb-3 btn btn-secondary">Create your quit plan</button>
+    </form>
+    <script src="{{url_for('static', filename='scripts/enterkey.js')}}"></script>
+{% endblock %}
